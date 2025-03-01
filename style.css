@@ -1,0 +1,53 @@
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+input[type='file'] {
+    opacity: 0;
+    display: none;
+}
+
+#uploader-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#uploader {
+    margin-bottom: 1rem;
+}
+
+#upload-button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#table-container {
+    border: 1px solid #999;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#table-container table {
+    width: 100%;
+    padding: 0.3rem;
+}
+
+#table-container tr {
+    padding: 1rem;
+}

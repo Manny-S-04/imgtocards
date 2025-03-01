@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Upload an file</h1>
+    <select id="firstLang">
+        <option value="ara">Arabic</option>
+        <option value="eng">English</option>
+        <option value="pol">Polish</option>
+        <option value="tur">Turkish</option>
+    </select>
+    <select id="secondLang">
+        <option value="tur">Turkish</option>
+        <option value="pol">Polish</option>
+        <option value="eng">English</option>
+        <option value="ara">Arabic</option>
+    </select>
+
+
+    <p>Status:</p>
+    <p id="status"></p>
+    <p>Progress:</p>
+    <p id="progress"></p>
+    <div id="uploader-container">
+        <label for="uploader">Upload Formatted Image</label>
+        <input type="file" name="uploader" id="uploader" multiple />
+        <button id="upload-button">Browse...</button>
+    </div>
+    <div class="hidden" id="table-container"></div>
+    <a class="hidden" id="download">Download file</a>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'></script>
+<script src="script.js" type="module"></script>
+
+</html>
