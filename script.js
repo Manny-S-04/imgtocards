@@ -27,11 +27,13 @@ document.getElementById('uploader').addEventListener('change', async function(e)
     for (let i = 0; i < files.length; i++) {
         const ret = await worker.recognize(files[i]);
         const lines = ret.data.text.split("\n");
-        res = lines.map(line => line.trim().split('-')).filter(l => l[0] !== '');
+        res = lines.map(line => line.split('-')).filter(l => l[0] !== '');
 
         if (isAra) {
             res = res.map(l => [l[0], l[1]] = [l[1], l[0]]);
         }
+
+        res = res.map(r => r.map(rl => rl.trim()));
     }
 
     statusElm.innerHTML = '100%';
