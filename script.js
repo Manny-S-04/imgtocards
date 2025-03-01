@@ -46,7 +46,7 @@ document.getElementById('uploader').addEventListener('change', async function(e)
 function arrayToCSV(data) {
     const csvRows = [];
     data.forEach(row => {
-        csvRows.push(row.join(','));
+        csvRows.push(row.trim().join(','));
     });
 
     return csvRows.join('\n');
