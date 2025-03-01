@@ -46,10 +46,6 @@ document.getElementById('uploader').addEventListener('change', async function(e)
 function arrayToCSV(data) {
     const csvRows = [];
     data.forEach(row => {
-        const front = `<p>${row[0]}</p>`
-        const back = `<p>${row[1]}</p>`
-        console.log(front)
-        console.log(back)
         csvRows.push(row.join(','));
     });
 
