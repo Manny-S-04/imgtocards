@@ -34,6 +34,9 @@ document.getElementById('uploader').addEventListener('change', async function(e)
         }
     }
 
+    statusElm.innerHTML = '100%';
+    progress.innerHTML = 'Done';
+
     createTable(res);
     downloadCSV(arrayToCSV(res));
 });
